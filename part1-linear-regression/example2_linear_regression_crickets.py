@@ -5,8 +5,8 @@ from sklearn.linear_model import LinearRegression
 
 # gets the data and sets x and y values
 data = pd.read_csv("part1-linear-regression/chirping_data.csv")
-x = data["Temp"]
-y = data["Chirps"]
+x = data["Temp"].values
+y = data["Chirps"].values
 print(x)
 print(y)
 # use reshape to turn the x values into a 2D array
@@ -25,7 +25,7 @@ r_squared = model.score(x, y)
 x_predict = 77
 # plug that value into your model
 prediction = model.predict([[x_predict]])
-
+prediction = model.predict([[x_predict]])
 # print out the linear equation and r squared value
 print(f"Model's Linear Equation: y = {coef}x + {intercept}")
 print(f"R Squared value: {r_squared}")

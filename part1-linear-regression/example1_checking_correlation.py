@@ -7,6 +7,8 @@ data = pd.read_csv("part1-linear-regression/chirping_data.csv")
 print(data)
 x = data["Temp"]
 y = data["Chirps"]
+print(x)
+print(y)
 
 # sets the size of the graph
 plt.figure(figsize=(6,4))
