@@ -11,7 +11,7 @@ y = data["Blood Pressure"]
 x = x.reshape(-1,1)
 
 # Create the model
-
+plt.figure(figsize=(6,4))
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
 
