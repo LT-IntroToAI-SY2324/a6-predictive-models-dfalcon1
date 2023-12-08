@@ -21,6 +21,6 @@ plt.title("Blood Pressure vs Age")
 
 # prints the correlation coefficient
 print(f"Correlation between Temperature and Chirps/Min: {x.corr(y)}")
-
+plt.plot(x, coef*x + intercept, c="r", label="Line of Best Fit")
 # show the plot
 plt.show()
