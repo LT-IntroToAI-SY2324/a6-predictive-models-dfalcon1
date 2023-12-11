@@ -18,7 +18,12 @@ xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = .2)
 
 # reshape the xtrain data into a 2D array
 xtrain = xtrain.reshape(-1, 1)
-
+print(f"x {x}")
+print(f"y {y}")
+print(f"train {xtrain}")
+print(f"train {xtest}")
+print(f"train {ytrain}")
+print(f"train {ytest}")
 # create the linear regression model using the training data
 model = LinearRegression().fit(xtrain, ytrain)
 
@@ -42,7 +47,7 @@ xtest = xtest.reshape(-1,1)
 predict = model.predict(xtest)
 # round the value in the np array to 2 decimal places
 predict = np.around(predict, 2)
-
+print(predict)
 # compare the actual and predicted values
 print("\nTesting Linear Model with Testing Data:")
 for index in range(len(xtest)):

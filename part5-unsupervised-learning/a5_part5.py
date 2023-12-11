@@ -8,10 +8,11 @@ data = pd.read_csv("part5-unsupervised-learning/customer_data.csv")
 x = data[["Annual Income", "Spending Score"]]
 
 #standardize the data
-
+x_std = StandardScaler().fit_transform(data)
 
 #the value of k has been defined for you
 k = 5
+km = KMeans(n_clusters=k).fit(x)
 
 #apply the kmeans algorithm
 
