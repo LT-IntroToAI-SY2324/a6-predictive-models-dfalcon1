@@ -35,3 +35,7 @@ for index in range(len(xtest)):
 
 print("***************")
 print("Testing Results")
+
+car1 = [[89,10],[150,20]]
+my_predictions = model.predict(car1)
+print(my_predictions)
