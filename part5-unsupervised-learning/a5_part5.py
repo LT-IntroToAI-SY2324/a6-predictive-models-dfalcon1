@@ -5,10 +5,10 @@ from sklearn.cluster import KMeans
 
 #imports the data
 data = pd.read_csv("part5-unsupervised-learning/customer_data.csv")
-x = data[["Annual Income", "Spending Score"]]
+x = data[["Annual Income", "Spending Score"]].values
 
 #standardize the data
-x_std = StandardScaler().fit_transform(data)
+x_std = StandardScaler().fit_transform(x)
 
 #the value of k has been defined for you
 k = 5
@@ -19,7 +19,7 @@ km = KMeans(n_clusters=k).fit(x)
 
 #get the centroid and label values
 centroids = km.cluster_centers_
-
+labels = km.labels_
 
 #sets the size of the graph
 plt.figure(figsize=(5,4))
